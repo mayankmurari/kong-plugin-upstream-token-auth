@@ -40,8 +40,8 @@ curl -i -X POST \
  --url http://localhost:8001/services/http-bin/routes \
  --data 'hosts[]=example.com' 
  ```
- 
- 1) Add plugin to service - When request type is form param and response type is json.
+---
+ **1) Add plugin to service - When request type is form param and response type is json.**
  
  ```
  curl -X POST http://localhost:8001/services/http-bin/plugins \
@@ -61,8 +61,8 @@ Test API
 ```
 curl -v -H "Host: example.com" 'http://localhost:8000/get'
 ```
-
- 2) Add plugin to service - When request type is json and response type is json
+---
+ **2) Add plugin to service - When request type is json and response type is json**
  
  ```
  curl -X POST http://localhost:8001/services/http-bin/plugins \
@@ -82,8 +82,8 @@ Test API
 ```
 curl -v -H "Host: example.com" 'http://localhost:8000/get'
 ```
-
- 3) Add plugin to service - When request type is json and response type is text
+---
+ **3) Add plugin to service - When request type is json and response type is text**
  
  ```
  curl -X POST http://localhost:8001/services/http-bin/plugins \
