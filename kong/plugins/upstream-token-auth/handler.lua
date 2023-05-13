@@ -114,7 +114,7 @@ end
 function UpstreamJWT:header_filter(conf)
     local status = kong.response.get_status()
     -- If auth doesn't work, delete token from cache
-    if status == 401 and kong.response.get_source() == "service" then
+    if status == 401 and kong.response.get_source() == "service" and conf.tokenexpiry then
         local cachekey = ""
         local parametersList = split(conf.parameters, ",")
         local parameters = splitTable(parametersList)
